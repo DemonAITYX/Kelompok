@@ -1,0 +1,521 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgb(90, 90, 90), rgb(41, 41, 41));
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    background: rgba(50, 50, 50, 0.762);
+    backdrop-filter: blur(10px);
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1px;
+    padding-top: 0px;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 800px;
+    margin: 1 auto;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+img {
+    height: 75px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    font-family: 'Cinzel';
+    gap: 2rem;
+    font-size: 23px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.nav-links a:hover {
+    font-size: 26px;
+    color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+#home .hero-content h1 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display';
+    line-height: 70px;
+    font-size: 53px;
+    color: #D4AF37;
+    transition: all 0.3s ease;
+    left: 825px;
+    top: 250px;
+}
+
+#home .desc {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 23px;
+    color: rgb(226, 226, 226);
+    left: 825px;
+    top: 233px;
+    font-size: 15px;
+}
+
+#home .video-bg { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+section {
+    min-height: 85vh;
+}
+
+/*Flower*/
+
+#hamper {
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 85vh;
+    scrollbar-width: none;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hamper-title {
+    color: #D4AF37;
+    font-size: 4rem;
+    font-family: 'Cinzel';
+    margin-bottom: 0.2rem;
+    margin-top: 8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    order: 1;
+}
+
+#hamper .container{
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 40px;
+    width: auto;
+    border-radius: 12px;
+    order: 2;
+}
+
+#hamper .card{
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 400px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+#hamper img{
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.intro{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(27, 27, 27, 0.94);
+    color: rgb(111, 193, 35);
+    transition: .3s;
+    opacity: 0.8;
+}
+
+.intro h1{
+    font-family: 'Cinzel';
+    color: #D4AF37;
+    margin: 10px;
+    font-size: 40px;
+}
+
+.intro p{
+    font-size: 20px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#hamper .intro span{
+    font-weight: bold;
+}
+
+.card:hover .intro{
+    height: 140px;
+    bottom: 0px;
+    background: black;
+}
+
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.card:hover img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.buy-btn {
+position: absolute;
+bottom: 10px;   
+right: 15px;   
+padding: 8px 18px;
+background: #000000;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+transition: background 0.3s ease;
+border: 2px solid gray;
+}
+
+.buy-btn:hover {
+  background: gray;
+}
+
+#hamper .sale-tag {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background-color: #f31b1b;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+  pointer-events: none;  
+}
+
+#hamper .card:hover .sale-tag {
+  opacity: 0; 
+}
+
+/*flower1*/
+
+#bouquet {
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 85vh;
+    scrollbar-width: none;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bou-title {
+    color: #D4AF37;
+    font-size: 4rem;
+    font-family: 'Cinzel';
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    order: 1;
+}
+
+#bouquet .container{
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 40px;
+    width: auto;
+    border-radius: 12px;
+    order: 2;
+}
+
+
+#bouquet .main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #1e1d1d;
+}
+
+#bouquet .main-header p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #353030;
+}
+
+#bouquet .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+}
+
+#bouquet .product-card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background-color: #444f5d67;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+#bouquet .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#bouquet .product-card:hover img {
+    transform: scale(1.1);
+}
+
+#bouquet .product-card h3 {
+    font-family: 'Cinzel';
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #D4AF37;
+}
+
+#bouquet .product-card .original-price {
+    text-decoration: line-through;
+    font-family: 'Cinzel';
+    color: #ed3e3e98;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#bouquet .product-card .sale-price {
+    font-size: 1.3em;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    color: rgb(111, 193, 35);
+}
+
+#bouquet .sale-tag {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background-color: #f31b1b;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+  pointer-events: none;  
+}
+
+#bouquet .product-card:hover .sale-tag {
+  opacity: 0; 
+}
+
+/*testimoni*/
+
+#testimoni .testi-title {
+    color: #D4AF37;
+    font-size: 4rem;
+    font-family: 'Cinzel';
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    order: 1;
+}
+
+#testimoni .container {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 50px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+#testimoni .card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  height: 400px;
+  width: 270px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+}
+
+#testimoni img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+#testimoni img:hover {
+  transform: scale(0.95);
+}
+
+
+/*scrollbar*/
+
+.container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #D4AF37, #FFD700);
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+}
+
+/*Responsif*/
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: flex;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 10px;
+  }
+
+  #home .hero-content h1 {
+    font-size: 28px;
+    line-height: 40px;
+    left: 0;
+    top: 150px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #home .desc {
+    font-size: 13px;
+    line-height: 20px;
+    left: 0;
+    top: 160px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  /* Hampers & Bouquets */
+  #hamper .container,
+  #bouquet .container,
+  #testimoni .container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #hamper .card,
+  #bouquet .product-card,
+  #testimoni .card {
+    width: 220px;
+    height: auto;
+    margin: 10px;
+  }
+
+  #hamper img {
+    width: 220px;
+    height: auto;
+  }
+
+  .intro {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Title section */
+  .hamper-title,
+  .bou-title,
+  .testi-title {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+}

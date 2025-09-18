@@ -1,0 +1,83 @@
+#flower1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(214, 177, 136, 0.462);
+    color: #623f3f;
+}
+
+#flower1 .main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color:  rgba(214, 178, 136, 0.601);
+    margin-bottom: 20px;
+}
+
+#flower1 .main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #1e1d1d;
+}
+
+#flower1 .main-header p {
+    font-size: 1.2em;
+    color: #353030;
+}
+
+#flower1 .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#flower .product-card {
+    background-color: #444f5d67;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 280px; /* Adjust as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+#flower1 .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+#flower1 .product-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+#flower1 .product-card .original-price {
+    text-decoration: line-through;
+    color: #1f1f1f98;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#flower .product-card .sale-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e61515; /* Warna merah untuk harga diskon */
+}
+
+#flower .sale-tag {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #f31b1b;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+}
